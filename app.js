@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = '3000';
+const PORT = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -39,6 +39,6 @@ app.post('/edit/:id', (req, res) => {
 
 
 
-app.listen(port, () =>{
-    console.log("Server is running at", port)
+app.listen(PORT, () =>{
+    console.log("Server is running at", PORT)
 })
